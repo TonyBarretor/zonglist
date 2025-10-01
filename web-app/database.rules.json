@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "drivers": {
+      "$driverId": {
+        ".read": true,
+        ".write": true,
+        "queue": {
+          ".indexOn": ["addedAt"]
+        },
+        "currentSong": {
+          ".validate": "newData.hasChildren(['videoId', 'title', 'artist'])"
+        },
+        "status": {
+          ".validate": "newData.val() === 'playing' || newData.val() === 'paused' || newData.val() === 'idle'"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+v=spf1 include:_spf-us.ionos.com ~all
+
+This is the default TXT in ionos
